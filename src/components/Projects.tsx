@@ -199,8 +199,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 text-xs sm:text-sm font-medium hover:from-purple-500/30 hover:to-blue-500/30 transition-all duration-300"
             >
               <FaExternalLinkAlt />
-              <span className="hidden sm:inline">{project.demoLabel || 'Live Website Link'}</span>
-              <span className="sm:hidden">Demo</span>
+              {project.demoLabel || 'Live Website Link'}
             </motion.a>
           )}
           {project.mobileApp && (
