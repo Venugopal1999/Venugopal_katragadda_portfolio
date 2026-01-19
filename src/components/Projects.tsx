@@ -10,6 +10,7 @@ interface Project {
   demo?: string
   demoLabel?: string
   mobileApp?: string
+  mobileAppLabel?: string
   featured?: boolean
 }
 
@@ -26,6 +27,7 @@ const projects: Project[] = [
     ],
     github: 'https://github.com/Venugopal1999/Meck_Mindset',
     demo: 'https://meck-mindset.vercel.app/',
+    demoLabel: 'Live Website Link',
     featured: true,
   },
   {
@@ -40,7 +42,9 @@ const projects: Project[] = [
     ],
     github: 'https://github.com/Venugopal1999/inventary_management',
     demo: 'https://inventary-management-three.vercel.app/',
+    demoLabel: 'Live Website Link',
     mobileApp: 'https://drive.google.com/file/d/1HYUlBDFcz_6ZSE9CTRnW228dCDXycreo/view?usp=sharing',
+    mobileAppLabel: 'Mobile Application Link',
     featured: true,
   },
   {
@@ -209,7 +213,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-gradient-to-r from-teal-500/20 to-green-500/20 border border-teal-500/30 text-xs sm:text-sm font-medium hover:from-teal-500/30 hover:to-green-500/30 transition-all duration-300"
             >
               <FaMobileAlt />
-              <span className="hidden sm:inline">Mobile App</span>
+              <span className="hidden sm:inline">{project.mobileAppLabel || 'Mobile App'}</span>
               <span className="sm:hidden">App</span>
             </motion.a>
           )}
